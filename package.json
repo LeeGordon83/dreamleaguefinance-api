@@ -1,5 +1,5 @@
 {
-  "name": "dreamleaguefinance-api",
+  "name": "dream-league-finance-api",
   "version": "1.0.0",
   "description": "backend services for dream league finance",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeeGordon83/dreamleaguefinance-api.git"
+    "url": "git+https://github.com/LeeGordon83/dream-league-finance-api.git"
   },
   "author": "Lee Gordon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LeeGordon83/dreamleaguefinance-api/issues"
+    "url": "https://github.com/LeeGordon83/dream-league-finance-api/issues"
   },
-  "homepage": "https://github.com/LeeGordon83/dreamleaguefinance-api#readme",
+  "homepage": "https://github.com/LeeGordon83/dream-league-finance-api#readme",
   "devDependencies": {
     "blipp": "^4.0.2",
     "nodemon": "^3.0.1",

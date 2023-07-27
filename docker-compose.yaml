@@ -1,9 +1,9 @@
 version: '3.8'
 services:
-  dream-league-api:
+  dream-league-finance-api:
     build: .
-    image: dream-league-api
-    container_name: dream-league-api
+    image: dream-league-finance-api
+    container_name: dream-league-finance-api
     environment: 
       JWT_SECRET: secret
       POSTGRES_USERNAME: postgres
@@ -13,28 +13,11 @@ services:
       SMTP_PASSWORD: ${SMTP_PASSWORD}
       WEB_URL: http://localhost:3000
       ALLOW_NON_MEMBER_REGISTRATION: "true"
-      REDIS_HOST: dream-league-api-redis
-      MESSAGE_HOST: dream-league-message
-      MESSAGE_USERNAME: rabbitmq
-      MESSAGE_PASSWORD: rabbitmq
 
-  dream-league-api-postgres:
+  dream-league-finance-api-postgres:
     image: postgres:12.8-alpine
     container_name: dream-league-finance-api-postgres
     environment:
-      POSTGRES_DB: dreamleaguefinance-api
+      POSTGRES_DB: dream-league-finance-api
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: postgres
-
-  dream-league-api-redis:
-    image: redis:6
-
-  dream-league-message:
-    image: rabbitmq:3-management-alpine
-    container_name: dream-league-message
-    hostname: dream-league-message
-    environment:
-      RABBITMQ_ERLANG_COOKIE: rabbitmq
-      RABBITMQ_DEFAULT_USER: rabbitmq
-      RABBITMQ_DEFAULT_PASS: rabbitmq
-      RABBITMQ_DEFAULT_VHOST: /
