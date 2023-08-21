@@ -1,11 +1,11 @@
 const joi = require('joi')
 const databaseConfig = require('./database')
-const envs = ['development', 'test', 'production']
+const { DEVELOPMENT, TEST, PRODUCTION } = require('../constants/environments')
 
 // Define config schema
 const schema = joi.object().keys({
   port: joi.number().default(3001),
-  env: joi.string().valid(...envs).default(envs[0]),
+  env: Joi.string().valid(DEVELOPMENT, TEST, PRODUCTION).default(DEVELOPMENT),
   jwtConfig: joi.object({
     secret: joi.string(),
     expiryInMinutes: joi.number().default(43800)
@@ -59,6 +59,6 @@ const value = {
   ...result.value,
   database: databaseConfig
 }
-value.isDev = value.env === 'development'
+value.isDev = value.env === DEVELOPMENT
 
 module.exports = value
