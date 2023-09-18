@@ -1,10 +1,14 @@
 {
   "name": "dream-league-finance-api",
   "version": "1.0.0",
-  "description": "backend services for dream league finance",
+  "description": "Backend services for dream league finance",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "start": "node app/index.js",
+    "start:watch": "nodemon --inspect=0.0.0.0 --ext css,js,njk --legacy-watch app/index.js",
+    "test": "npm run test",
+    "migrate": "sequelize db:migrate",
+    "seed": "sequelize db:seed:all"
   },
   "repository": {
     "type": "git",

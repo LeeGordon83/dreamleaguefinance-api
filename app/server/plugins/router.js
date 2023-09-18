@@ -2,7 +2,8 @@ const routes = [].concat(
   // require('../routes/identity/login'),
   // require('../routes/identity/register'),
   // require('../routes/identity/forgot-password'),
-  // require('../routes/identity/reset-password')
+  // require('../routes/identity/reset-password'),
+  require('../routes/managers')
 )
 
 module.exports = {

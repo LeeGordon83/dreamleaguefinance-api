@@ -5,7 +5,7 @@ const { DEVELOPMENT, TEST, PRODUCTION } = require('../constants/environments')
 // Define config schema
 const schema = joi.object().keys({
   port: joi.number().default(3001),
-  env: Joi.string().valid(DEVELOPMENT, TEST, PRODUCTION).default(DEVELOPMENT),
+  env: joi.string().valid(DEVELOPMENT, TEST, PRODUCTION).default(DEVELOPMENT),
   jwtConfig: joi.object({
     secret: joi.string(),
     expiryInMinutes: joi.number().default(43800)

@@ -2,9 +2,9 @@ const joi = require('joi')
 
 // Define config schema
 const schema = joi.object().keys({
-  username: joi.string(),
-  password: joi.string(),
-  database: joi.string().default('dream_league_finance_api'),
+  username: joi.string().default('postgres'),
+  password: joi.string().default('postgres'),
+  database: joi.string().default('dream-league-finance-api'),
   host: joi.string().default('localhost'),
   port: joi.number().default(5432),
   dialect: joi.string().default('postgres'),
