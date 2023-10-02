@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     value: DataTypes.DECIMAL(10,2),
     date: DataTypes.DATE,
     notes: DataTypes.STRING,
-    typeId: DataTypes.INTEGER,
+    transactionTypeId: DataTypes.INTEGER,
     managerId: DataTypes.INTEGER,
     weekId: DataTypes.INTEGER
   }, {
@@ -17,16 +17,11 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false
   })
   Transaction.associate = function (models) {
-  Transaction.associate = models => {
-    Transaction.belongsTo(models.Manager, { foreignKey: "managerId" })
-  }
-  Transaction.associate = models => {
-    Transaction.belongsTo(models.Week, { foreignKey: "weekId" })
-  }
-  Transaction.associate = models => {
-    Transaction.belongsTo(models.TransactionType, { foreignKey: "transactionTypeId" })
+    Transaction.belongsTo(models.Manager, { foreignKey: 'managerId', as: 'manager' })
+    Transaction.belongsTo(models.Week, { foreignKey: 'weekId' })
+    Transaction.belongsTo(models.TransactionType, { foreignKey: 'transactionTypeId', as: 'transactionType' })
   }
 
-  }
+  
   return Transaction
 }

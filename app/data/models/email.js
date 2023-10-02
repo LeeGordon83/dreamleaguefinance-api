@@ -13,10 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false
   })
   Email.associate = function (models) {
-    Email.belongsTo(models.Manager, {
-      foreignKey: 'managerId',
-      as: 'manager'
-    })
+    Email.belongsTo(models.Manager, { foreignKey: 'managerId' })
   }
   return Email
 }

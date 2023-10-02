@@ -31,9 +31,9 @@ module.exports = {
       managers: {
         type: Sequelize.INTEGER
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('histories');
+    await queryInterface.dropTable('histories')
   }
-};
+}

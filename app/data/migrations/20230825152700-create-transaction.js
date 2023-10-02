@@ -16,7 +16,7 @@ module.exports = {
       notes: {
         type: Sequelize.STRING
       },
-      typeId: {
+      transactionTypeId: {
         type: Sequelize.INTEGER
       },
       managerId: {
@@ -25,9 +25,9 @@ module.exports = {
       weekId: {
         type: Sequelize.INTEGER
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('transactions');
+    await queryInterface.dropTable('transactions')
   }
-};
+}

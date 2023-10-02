@@ -16,9 +16,9 @@ module.exports = {
       active: {
         type: Sequelize.BOOLEAN
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('jackpots');
+    await queryInterface.dropTable('jackpots')
   }
-};
+}

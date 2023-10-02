@@ -13,9 +13,9 @@ module.exports = {
       active: {
         type: Sequelize.BOOLEAN
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Managers');
+    await queryInterface.dropTable('Managers')
   }
-};
+}

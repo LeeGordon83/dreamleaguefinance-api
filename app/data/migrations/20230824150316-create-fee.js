@@ -13,9 +13,9 @@ module.exports = {
       amount: {
         type: Sequelize.DECIMAL(10,2)
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('fees');
+    await queryInterface.dropTable('fees')
   }
-};
+}

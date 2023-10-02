@@ -16,9 +16,9 @@ module.exports = {
       complete: {
         type: Sequelize.BOOLEAN
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('weeks');
+    await queryInterface.dropTable('weeks')
   }
-};
+}

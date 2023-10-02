@@ -10,9 +10,9 @@ module.exports = {
       type: {
         type: Sequelize.STRING
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('transactionTypes');
+    await queryInterface.dropTable('transactionTypes')
   }
-};
+}

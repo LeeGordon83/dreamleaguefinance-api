@@ -1,12 +1,9 @@
-const Joi = require('joi')
-const boom = require('@hapi/boom')
-const db = require('../../data')
-const { getManager, getManagers } = require('../../managers')
-const { GET, POST } = require('../../constants/verbs')
+const { getManager, getManagers } = require('../../../managers')
+const { GET } = require('../../../constants/verbs')
 
 module.exports = [{
   method: GET,
-  path: '/managers',
+  path: '/admin/managers',
   options: {
     handler: async (_request, h) => {
       return h.response(await getManagers())
@@ -14,7 +11,7 @@ module.exports = [{
   }
 }, {
   method: GET,
-  path: '/manager',
+  path: '/admin/manager',
   handler: async (request, h) => {
     return h.response(await getManager(request.query.managerId))
   }

@@ -2,13 +2,16 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('managers', [{
       managerId: 1,
-      name: 'Lee'
+      name: 'Lee',
+      active: true
     }, {
       managerId: 2,
-      name: 'Billy'
+      name: 'Billy',
+      active: true
     }, {
       managerId: 3,
-      name: 'John'
+      name: 'John',
+      active: true
     }], {
       ignoreDuplicates: true
     })

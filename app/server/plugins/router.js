@@ -3,7 +3,11 @@ const routes = [].concat(
   // require('../routes/identity/register'),
   // require('../routes/identity/forgot-password'),
   // require('../routes/identity/reset-password'),
-  require('../routes/managers')
+  require('../routes/admin/managers'),
+  require('../routes/finance/all-transactions'),
+  require('../routes/finance/game-weeks'),
+  require('../routes/finance/paid-in'),
+  require('../routes/admin/season'),
 )
 
 module.exports = {

@@ -16,9 +16,9 @@ module.exports = {
       league: {
         type: Sequelize.BOOLEAN
       }
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('prizes');
+    await queryInterface.dropTable('prizes')
   }
-};
+}

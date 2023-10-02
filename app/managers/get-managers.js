@@ -1,8 +1,12 @@
 const db = require('../data')
 
 const getManagers = async () => {
-  var managers = db.Manager.findAll({ order: ['name'] })
-  console.log(managers)
+  const managers = await db.Manager.findAll({
+    include: [{
+       model: db.Email,
+       as: 'emails' }] 
+  })
+
   return managers
 }
 
