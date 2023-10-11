@@ -1,4 +1,3 @@
-
 const { getSeasonData } = require('../../../admin')
 const { GET } = require('../../../constants/verbs')
 
