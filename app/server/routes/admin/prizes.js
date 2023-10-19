@@ -1,7 +1,6 @@
 const { getPrizes } = require('../../../admin')
 const { GET } = require('../../../constants/verbs')
 
-
 module.exports = [{
   method: GET,
   path: '/admin/prizes',

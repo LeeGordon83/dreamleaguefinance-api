@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     managerId: DataTypes.INTEGER,
-    balance: DataTypes.DECIMAL(10,2),
+    balance: DataTypes.DECIMAL(10, 2)
   }, {
     tableName: 'balances',
     freezeTableName: true,

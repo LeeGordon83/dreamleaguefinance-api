@@ -12,6 +12,9 @@ module.exports = {
     }, {
       transactionTypeId: 4,
       type: 'Jackpot'
+    }, {
+      transactionTypeId: 5,
+      type: 'League or Cup'
     }], {
       ignoreDuplicates: true
     })

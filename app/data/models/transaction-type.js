@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    type: DataTypes.STRING,
+    type: DataTypes.STRING
   }, {
     tableName: 'transactionTypes',
     freezeTableName: true,

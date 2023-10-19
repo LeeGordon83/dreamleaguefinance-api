@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     type: DataTypes.STRING,
-    amount: DataTypes.DECIMAL(10,2)
+    amount: DataTypes.DECIMAL(10, 2)
   }, {
     tableName: 'fees',
     freezeTableName: true,

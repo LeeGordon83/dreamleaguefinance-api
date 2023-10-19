@@ -1,7 +1,6 @@
 const { getGameWeeks } = require('../../../finance')
 const { GET } = require('../../../constants/verbs')
 
-
 module.exports = [{
   method: GET,
   path: '/finance/game-weeks',

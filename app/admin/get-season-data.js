@@ -1,14 +1,12 @@
 const db = require('../data')
 
 const getSeasonData = async () => {
-
-
   let startWeek
   const weeks = await db.Week.findAll()
   if (weeks.length) {
-  startWeek = weeks.find(week => week.weekId === 1)
+    startWeek = weeks.find(week => week.weekId === 1)
   }
-  
+
   const managerCount = await db.Manager.count({
     where: {
       active: true
@@ -16,7 +14,7 @@ const getSeasonData = async () => {
   })
 
   const seasonDataModel = {
-    weeks: weeks,
+    weeks,
     start: weeks.length ? startWeek.start : '',
     managers: managerCount
   }

@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    value: DataTypes.DECIMAL(10,2),
+    value: DataTypes.DECIMAL(10, 2),
     date: DataTypes.DATE,
     notes: DataTypes.STRING,
     transactionTypeId: DataTypes.INTEGER,
@@ -22,6 +22,5 @@ module.exports = (sequelize, DataTypes) => {
     Transaction.belongsTo(models.TransactionType, { foreignKey: 'transactionTypeId', as: 'transactionType' })
   }
 
-  
   return Transaction
 }

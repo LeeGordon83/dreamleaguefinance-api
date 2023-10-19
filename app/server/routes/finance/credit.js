@@ -1,7 +1,6 @@
 const { getCredit } = require('../../../finance')
 const { GET } = require('../../../constants/verbs')
 
-
 module.exports = [{
   method: GET,
   path: '/finance/credit',

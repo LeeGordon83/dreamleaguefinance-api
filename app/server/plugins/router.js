@@ -10,7 +10,8 @@ const routes = [].concat(
   require('../routes/finance/all-transactions'),
   require('../routes/finance/game-weeks'),
   require('../routes/finance/paid-in'),
-  require('../routes/finance/credit')
+  require('../routes/finance/credit'),
+  require('../routes/finance/balance')
 )
 
 module.exports = {
