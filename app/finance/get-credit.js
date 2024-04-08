@@ -62,7 +62,8 @@ function groupMoneyOwedByMonth (weeks, months, fees) {
   let totalOwed = 0
 
   for (const index in months) {
-    totalOwed += owedByMonthName[months[index]].owedSubtotal
+    const month = months[index].monthName
+    totalOwed += owedByMonthName[month].owedSubtotal
   }
 
   // Convert the object into an array of month name objects
@@ -82,17 +83,17 @@ function managerCreditCalculator (manager, transactions, owedByMonth, months) {
   const managerCreditByMonth = {}
 
   for (const index in months) {
-    const monthName = months[index]
+    const monthName = months[index].monthName
 
     // If the month name doesn't exist in the object, create an empty array for it
 
-    if (!managerCreditByMonth[months[index]]) {
-      managerCreditByMonth[months[index]] = { monthName, monthCredit: 0 }
+    if (!managerCreditByMonth[monthName]) {
+      managerCreditByMonth[monthName] = { monthName, monthCredit: 0 }
     }
 
     totalCredit = (totalCredit - owedByMonth.groupedOwed[index].owedSubtotal).toFixed(2)
 
-    managerCreditByMonth[months[index]].monthCredit = totalCredit
+    managerCreditByMonth[monthName].monthCredit = totalCredit
   }
 
   const groupedManagerCreditByMonth = Object.values(managerCreditByMonth)

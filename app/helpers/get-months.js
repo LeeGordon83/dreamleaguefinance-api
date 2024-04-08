@@ -6,14 +6,15 @@ const getMonths = async (weeks) => {
 
 function getMonthsBetweenDates (startDate, endDate) {
   const months = []
-  const currentDate = new Date(startDate)
+  let currentDate = new Date(startDate)
 
   while (currentDate <= endDate) {
+    const monthNumber = currentDate.getMonth() + 1
     const monthName = currentDate.toLocaleString('en-GB', { month: 'long' })
-    months.push(monthName)
+    months.push({ monthNumber, monthName })
 
     // Move to the next month
-    currentDate.setMonth(currentDate.getMonth() + 1)
+    currentDate = new Date(currentDate.setMonth(currentDate.getMonth() + 1))
   }
   return months
 }
